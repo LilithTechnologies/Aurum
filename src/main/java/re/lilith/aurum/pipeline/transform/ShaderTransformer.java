@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
  * the patcher, the cache should be disabled with {@link #useCache}.
  */
 public class ShaderTransformer {
-    private static final boolean useCache = false;
+    private static final boolean useCache = true;
     private static final int CACHE_SIZE = 400;
 
     private static final Map<CacheKey, Map<PatchShaderType, String>> cache =
