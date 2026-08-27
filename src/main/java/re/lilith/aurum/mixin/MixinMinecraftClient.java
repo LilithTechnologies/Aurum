@@ -56,7 +56,6 @@ public class MixinMinecraftClient {
         }
 
         Aurum.LOGGER.info("Reloading pipeline on world change: {} => {}", Aurum.lastDimension, Aurum.getCurrentDimension());
-        Aurum.getPipelineManager().destroyPipeline();
 
         // NB: We need create the pipeline immediately, so that it is ready by the time that Celeritas starts trying to
         // initialize its world renderer.
