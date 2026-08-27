@@ -37,7 +37,7 @@ public class ShadowRenderTargets {
         targets = new RenderTarget[shadowDirectives.getColorSamplingSettings().size()];
         formats = new InternalTextureFormat[shadowDirectives.getColorSamplingSettings().size()];
         flipped = new boolean[shadowDirectives.getColorSamplingSettings().size()];
-        hardwareFiltered = new boolean[shadowDirectives.getColorSamplingSettings().size()];
+        hardwareFiltered = new boolean[shadowDirectives.getDepthSamplingSettings().size()];
         buffersToBeCleared = new IntArrayList();
 
         this.mainDepth = new DepthTexture(resolution, resolution, DepthBufferFormat.DEPTH);
@@ -53,7 +53,9 @@ public class ShadowRenderTargets {
             if (settings.getClear()) {
                 buffersToBeCleared.add(i);
             }
+        }
 
+        for (int i = 0; i < shadowDirectives.getDepthSamplingSettings().size(); i++) {
             this.hardwareFiltered[i] = shadowDirectives.getDepthSamplingSettings().get(i).getHardwareFiltering();
         }
 
