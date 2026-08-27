@@ -51,7 +51,7 @@ public class PackDirectives {
         shadowDirectives = packShadowDirectives;
     }
 
-    PackDirectives(Set<Integer> supportedRenderTargets, ShaderProperties properties) {
+    public PackDirectives(Set<Integer> supportedRenderTargets, ShaderProperties properties) {
         this(supportedRenderTargets, new PackShadowDirectives(properties));
         cloudSetting = properties.getCloudSetting();
         underwaterOverlay = properties.getUnderwaterOverlay().orElse(false);
