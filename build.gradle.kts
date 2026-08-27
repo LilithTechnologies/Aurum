@@ -105,3 +105,10 @@ tasks.withType<JavaCompile>().configureEach {
 tasks.test {
     useJUnitPlatform()
 }
+tasks.processResources {
+    inputs.property("version", version)
+
+    filesMatching(listOf("fabric.mod.json")) {
+        expand(mapOf("version" to version))
+    }
+}
