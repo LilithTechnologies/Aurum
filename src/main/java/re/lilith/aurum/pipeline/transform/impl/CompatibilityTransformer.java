@@ -34,6 +34,7 @@ public class CompatibilityTransformer {
 
         renameLegacyTextureFunctions(transformer);
         injectInverseIfMissing(transformer, parameters.version);
+        injectFogCompatIfNeeded(transformer);
 
         transformer.removeConstAssignment();
     }
@@ -41,8 +42,23 @@ public class CompatibilityTransformer {
     public static void transformCompute(Transformer transformer, int version) {
         renameLegacyTextureFunctions(transformer);
         injectInverseIfMissing(transformer, version);
+        injectFogCompatIfNeeded(transformer);
 
         transformer.removeConstAssignment();
+    }
+
+    private static void injectFogCompatIfNeeded(Transformer transformer) {
+        if (!transformer.containsCall("gl_Fog")) {
+            return;
+        }
+
+        transformer.rename("gl_Fog", "aurum_Fog");
+        transformer.injectVariable("uniform float aurum_FogDensity;");
+        transformer.injectVariable("uniform float aurum_FogStart;");
+        transformer.injectVariable("uniform float aurum_FogEnd;");
+        transformer.injectVariable("uniform vec4 aurum_FogColor;");
+        transformer.injectFunction("struct aurum_FogParameters {vec4 color;float density;float start;float end;float scale;};");
+        transformer.injectFunction("aurum_FogParameters aurum_Fog = aurum_FogParameters(aurum_FogColor, aurum_FogDensity, aurum_FogStart, aurum_FogEnd, 1.0f / (aurum_FogEnd - aurum_FogStart));");
     }
 
     private static void injectInverseIfMissing(Transformer transformer, int version) {
