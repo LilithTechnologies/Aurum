@@ -1,0 +1,23 @@
+{
+  "aurum.shaders.reloaded": "Shaders herladen!",
+  "aurum.keybind.reload": "Herlaad Shaders",
+  "aurum.shaders.reloaded.failure": "Shaders herladen is mislukt! Reden: %s",
+  
+  "options.aurum.apply": "Toepassen",
+  "options.aurum.refresh": "Verversen",
+  "options.aurum.openShaderPackFolder": "Open de Shader Pack map...",
+  "options.aurum.refreshShaderPacks": "Ververs Shader Pack",
+  "options.aurum.shaderPackSelection": "Shader Packs...",
+  "options.aurum.shaderPackSelection.title": "Shader Packs",
+  "options.aurum.shaderPackSelection.addedPack": "Shader Pack \"%s\" toegevoegd",
+  "options.aurum.shaderPackSelection.addedPacks": "%s Shader Packs toegevoegd",
+  "options.aurum.shaderPackSelection.failedAdd": "Bestanden zijn geen geldige Shader Packs",
+  "options.aurum.shaderPackSelection.failedAddSingle": "\"%s\" is geen geldige Shader Pack",
+  "options.aurum.shaderPackSelection.copyError": "Kon Shader Pack \"%s\" niet toevoegen",
+  "options.aurum.shaderPackSelection.copyErrorAlreadyExists": "\"%s\" staat al in uw Shader Packs map!",
+  "options.aurum.shaders.disabled": "Shaders: Uitgeschakeld",
+  "options.aurum.shaders.enabled": "Shaders: Ingeschakeld",
+
+  "pack.aurum.select.title": "Selecteren",
+  "pack.aurum.list.label": "+ Voeg Shader Packs toe door te slepen en neer te zetten"
+}

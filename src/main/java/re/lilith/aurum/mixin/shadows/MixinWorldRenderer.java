@@ -1,0 +1,102 @@
+package re.lilith.aurum.mixin.shadows;
+
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import net.minecraft.client.render.WorldRenderer;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Mutable;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
+import re.lilith.aurum.pipeline.pathways.shadows.frustum.CullingDataCache;
+
+import java.util.List;
+
+@Mixin(WorldRenderer.class)
+public class MixinWorldRenderer implements CullingDataCache {
+    @Shadow
+    @Mutable
+    private List<WorldRenderer.ChunkInfo> visibleChunks;
+
+    @Unique
+    private List<WorldRenderer.ChunkInfo> savedRenderChunks = new ObjectArrayList<>(69696);
+
+    @Shadow
+    private boolean needsTerrainUpdate;
+
+    @Unique
+    private boolean savedNeedsTerrainUpdate;
+
+    @Shadow
+    private double lastCameraX;
+
+    @Shadow
+    private double lastCameraY;
+
+    @Shadow
+    private double lastCameraZ;
+
+    @Shadow
+    private double lastCameraPitch;
+
+    @Shadow
+    private double lastCameraYaw;
+
+    @Unique
+    private double savedLastCameraX;
+
+    @Unique
+    private double savedLastCameraY;
+
+    @Unique
+    private double savedLastCameraZ;
+
+    @Unique
+    private double savedLastCameraPitch;
+
+    @Unique
+    private double savedLastCameraYaw;
+
+    @Override
+    public void aurum$saveState() {
+        swap();
+    }
+
+    @Override
+    public void aurum$restoreState() {
+        swap();
+    }
+
+    @Unique
+    private void swap() {
+        List<WorldRenderer.ChunkInfo> tmpList = visibleChunks;
+        visibleChunks = savedRenderChunks;
+        savedRenderChunks = tmpList;
+
+        // TODO: If the normal chunks need a terrain update, these chunks probably do too...
+        // We probably should copy it over
+        boolean tmpBool = needsTerrainUpdate;
+        needsTerrainUpdate = savedNeedsTerrainUpdate;
+        savedNeedsTerrainUpdate = tmpBool;
+
+        double tmp;
+
+        tmp = lastCameraX;
+        lastCameraX = savedLastCameraX;
+        savedLastCameraX = tmp;
+
+        tmp = lastCameraY;
+        lastCameraY = savedLastCameraY;
+        savedLastCameraY = tmp;
+
+        tmp = lastCameraZ;
+        lastCameraZ = savedLastCameraZ;
+        savedLastCameraZ = tmp;
+
+        tmp = lastCameraPitch;
+        lastCameraPitch = savedLastCameraPitch;
+        savedLastCameraPitch = tmp;
+
+        tmp = lastCameraYaw;
+        lastCameraYaw = savedLastCameraYaw;
+        savedLastCameraYaw = tmp;
+    }
+}

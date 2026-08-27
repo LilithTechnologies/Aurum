@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "aurum",
+  "version": "${version}",
+  "name": "Aurum",
+  "description": "A modern Minecraft shader pack loader, built for the OptiFine shader format",
+  "authors": [
+    {
+      "name": "Lunasa (ohlunasa)",
+      "contact": {
+        "email": "me@lunasa.dev",
+        "homepage": "https://lunasa.dev"
+      }
+    },
+    "coderbot",
+    "IMS212",
+    "Justsnoopy30",
+    "FoundationGames"
+  ],
+  "license": "LGPL-3.0-only",
+  "environment": "client",
+  "accessWidener": "aurum.accesswidener",
+  "mixins": [
+    "aurum.mixins.json",
+    "aurum-vertexformat.mixins.json",
+    "aurum-argentum.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ["1.8.9"],
+    "fabricloader": ">=0.16.0",
+    "argentum": "*"
+  }
+}

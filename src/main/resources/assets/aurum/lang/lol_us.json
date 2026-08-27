@@ -1,0 +1,33 @@
+{
+  "aurum.shaders.reloaded": "Shadews wewoaded!",
+  "aurum.shaders.toggled": "Toggwed shadews to %s!",
+  "aurum.keybind.reload": "Wewoad shadews",
+  "aurum.keybind.shaderPackSelection": "Shadewpack sewection scween",
+  "aurum.keybind.toggleShaders": "Toggwe Shadews",
+  "aurum.keybinds": "Iwis",
+  "aurum.shaders.reloaded.failure": "Faiwed to wewoad shadews! Reason: %s",
+  "aurum.shaders.toggled.failure": "Faiwed to toggwe shadews! Reason: %s",
+  "aurum.sodium.failure.title": "Iwis faiwed to woad!",
+  "aurum.sodium.failure.reason": "You have Sodium in youw mods fowdew, howevew Iwis incwudes it. Pwease cwose da game, and wemove Sodium from youw mods fowdew.",
+
+  "options.aurum.apply": "Appwy",
+  "options.aurum.refresh": "Refwesh",
+  "options.aurum.openShaderPackFolder": "Open Shadew Pack Fowdew...",
+  "options.aurum.refreshShaderPacks": "Refwesh Shadew Packs",
+  "options.aurum.shaderPackSelection": "Shadew Packs...",
+  "options.aurum.shaderPackSelection.title": "Shadew Packs",
+  "options.aurum.shaderPackSelection.addedPack": "Added Shadew Pack \"%s\"",
+  "options.aurum.shaderPackSelection.addedPacks": "Added %s Shadew Packs",
+  "options.aurum.shaderPackSelection.failedAdd": "Fiwes wewe not vawid Shadew Packs",
+  "options.aurum.shaderPackSelection.failedAddSingle": "\"%s\" ish not a vawid Shadew Pack",
+  "options.aurum.shaderPackSelection.copyError": "Couwd not add Shadew Pack \"%s\"",
+  "options.aurum.shaderPackSelection.copyErrorAlreadyExists": "\"%s\" ish awwready in youw Shadew Packs fowdew!",
+  "options.aurum.shaders.disabled": "Shadews: Disabwed",
+  "options.aurum.shaders.enabled": "Shadews: Enabwed",
+  "options.aurum.shadowDistance": "Mwax Swadow Dwistance",
+  "options.aurum.shadowDistance.enabled": "Awwows you to change da mwaximum dwistance fow swadows. Tewwain and entities beyond dis dwistance wiww not cast swadows. Lowering da shadow distance can sigwificantlwy incwease pewfowmance.",
+  "options.aurum.shadowDistance.disabled": "Youw cuwwent shadew pack has awweady set a wendew dwistance fow swadows; you cawwot chwange wit.",
+
+  "pack.aurum.select.title": "Sewect",
+  "pack.aurum.list.label": "+ Dwag and Dwop Shadew Packs to add"
+}

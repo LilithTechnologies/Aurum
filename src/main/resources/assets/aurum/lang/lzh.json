@@ -1,0 +1,28 @@
+{
+  "aurum.shaders.reloaded": "旣重載影！",
+  "aurum.shaders.toggled": "用以%s之影！",
+  "aurum.keybind.reload": "重載影",
+  "aurum.keybind.shaderPackSelection": "擇影囊之幕",
+  "aurum.keybind.toggleShaders": "影之啟閉",
+  "aurum.keybinds": "Aurum",
+  "aurum.shaders.reloaded.failure": "以%s故，弗能重載影！",
+  "aurum.shaders.toggled.failure": "以%s故，弗能用影！",
+
+  "options.aurum.apply": "然",
+  "options.aurum.refresh": "重整",
+  "options.aurum.openShaderPackFolder": "啟影囊之資料夾……",
+  "options.aurum.refreshShaderPacks": "重載影囊",
+  "options.aurum.shaderPackSelection": "影囊……",
+  "options.aurum.shaderPackSelection.title": "影囊",
+  "options.aurum.shaderPackSelection.addedPack": "旣添影囊 \"%s\"",
+  "options.aurum.shaderPackSelection.addedPacks": "旣添影囊 %s ",
+  "options.aurum.shaderPackSelection.failedAdd": "非可行之影囊",
+  "options.aurum.shaderPackSelection.failedAddSingle": "「%s」者，非可行之影囊也",
+  "options.aurum.shaderPackSelection.copyError": "弗能添新影囊 \"%s\"",
+  "options.aurum.shaderPackSelection.copyErrorAlreadyExists": "\"%s\" 旣存於影囊資料夾中！",
+  "options.aurum.shaders.disabled": "影：關",
+  "options.aurum.shaders.enabled": "影：開",
+
+  "pack.aurum.select.title": "擇",
+  "pack.aurum.list.label": "曳影囊於此"
+}

@@ -1,0 +1,23 @@
+{
+  "aurum.shaders.reloaded": "Shaders Recarregados!",
+  "aurum.keybind.reload": "Recarregar Shaders",
+  "aurum.shaders.reloaded.failure": "Falha no Reload Shaders! Motivo: %s",
+
+  "options.aurum.apply": "Aplicar",
+  "options.aurum.refresh": "Actualizar",
+  "options.aurum.openShaderPackFolder": "Pasta de Shader Pack Aberto......",
+  "options.aurum.refreshShaderPacks": "Actualizar Shader Packs",
+  "options.aurum.shaderPackSelection": "Shader Packs...",
+  "options.aurum.shaderPackSelection.title": "Shader Packs",
+  "options.aurum.shaderPackSelection.addedPack": "Adicionado Pacote de Shader \"%s\"",
+  "options.aurum.shaderPackSelection.addedPacks": "Adicionadas %s Shader Packs",
+  "options.aurum.shaderPackSelection.failedAdd": "Os ficheiros não eram válidos Shader Packs",
+  "options.aurum.shaderPackSelection.failedAddSingle": "\"%s\" não é um Pacote Shader válido",
+  "options.aurum.shaderPackSelection.copyError": "Não foi possível acrescentar Shader Pack \"%s\"",
+  "options.aurum.shaderPackSelection.copyErrorAlreadyExists": "\"%s\" já está na sua pasta Shader Packs!",
+  "options.aurum.shaders.disabled": "Shaders: Deficientes",
+  "options.aurum.shaders.enabled": "Shaders: Activados",
+
+  "pack.aurum.select.title": "Seleccionar",
+  "pack.aurum.list.label": "+ Trascina e rilascia Shader Pack da aggiungere"
+}

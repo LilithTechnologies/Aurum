@@ -1,0 +1,28 @@
+{
+  "aurum.shaders.reloaded": "Shaders rechargés !",
+  "aurum.shaders.toggled": "Shaders basculés sur %s !",
+  "aurum.keybind.reload": "Recharger les shaders",
+  "aurum.keybind.shaderPackSelection": "Écran de sélection du pack de shaders",
+  "aurum.keybind.toggleShaders": "Activation des shaders",
+  "aurum.keybinds": "Aurum",
+  "aurum.shaders.reloaded.failure": "Échec lors du rechargement des shaders ! Raison : %s",
+  "aurum.shaders.toggled.failure": "Échec lors de l'activation des shaders ! Raison : %s",
+
+  "options.aurum.apply": "Appliquer",
+  "options.aurum.refresh": "Rafraichir",
+  "options.aurum.openShaderPackFolder": "Ouvrir le dossier des packs de shaders...",
+  "options.aurum.refreshShaderPacks": "Rafraichir les packs de shaders",
+  "options.aurum.shaderPackSelection": "Packs de shaders...",
+  "options.aurum.shaderPackSelection.title": "Packs de shaders",
+  "options.aurum.shaderPackSelection.addedPack": "Pack de shaders ajouté : \"%s\"",
+  "options.aurum.shaderPackSelection.addedPacks": "%s pack de shaders ajoutés",
+  "options.aurum.shaderPackSelection.failedAdd": "Les fichiers ne sont pas des pack de shaders valides",
+  "options.aurum.shaderPackSelection.failedAddSingle": "\"%s\" n'est pas un pack de shaders valide",
+  "options.aurum.shaderPackSelection.copyError": "Erreur lors de l'ajout du pack de shaders \"%s\"",
+  "options.aurum.shaderPackSelection.copyErrorAlreadyExists": "\"%s\" est déjà dans votre dossier de packs de shaders !",
+  "options.aurum.shaders.disabled": "Shaders : Désactivés",
+  "options.aurum.shaders.enabled": "Shaders : Activés",
+
+  "pack.aurum.select.title": "Sélectionner",
+  "pack.aurum.list.label": "+ Glissez-déposez vos packs de shaders ici pour les ajouter"
+}

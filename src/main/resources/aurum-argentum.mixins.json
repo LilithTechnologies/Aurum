@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "re.lilith.aurum.celeritas.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "verbose": true,
+  "client": [
+    "MixinArgentumChunkRenderer",
+    "MixinEntityInstancing",
+    "MixinEntityShadowBatch",
+    "MixinFastBlockRenderer",
+    "MixinPrimitiveChunkBuildContext",
+    "MixinPrimitivePipelineState",
+    "MixinPrimitiveRenderSectionManager",
+    "MixinRenderSectionManager",
+    "MixinShaderChunkRenderer",
+    "MixinVideoOptionsScreen",
+    "MixinCeleritasVideoOptionsController"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

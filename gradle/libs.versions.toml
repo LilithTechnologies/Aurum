@@ -1,0 +1,56 @@
+[versions]
+java = "25"
+
+minecraft = "1.8.9"
+legacyYarn = "1.8.9+build.4"
+fabricLoader = "0.19.3"
+
+lenis = "0.1.3"
+argentum = "1.0.0"
+
+lwjgl = "3.4.3"
+joml = "1.10.5"
+fastutil = "8.5.6"
+glslTransformLib = "0.2.0-33.gdb6e8cb"
+antlr4Runtime = "4.13.2"
+jcpp = "1.4.14"
+lombok = "1.18.46"
+
+celeritas = "2.4.0-dev.6"
+osl = "0.20.1"
+
+devauth = "1.2.2"
+
+loom = "1.17-SNAPSHOT"
+
+[plugins]
+loom = { id = "net.fabricmc.fabric-loom-remap", version.ref = "loom" }
+ploceus = { id = "ploceus", version.ref = "loom" }
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+legacy-yarn = { module = "net.legacyfabric:legacy-yarn", version.ref = "legacyYarn" }
+fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabricLoader" }
+
+lenis = { module = "pl.tomgirl:lenis", version.ref = "lenis" }
+
+celeritas = { module = "org.embeddedt.celeritas:celeritas-common", version.ref = "celeritas" }
+
+lwjgl-tinyfd = { module = "org.lwjgl:lwjgl-tinyfd", version.ref = "lwjgl" }
+lwjgl-stb = { module = "org.lwjgl:lwjgl-stb", version.ref = "lwjgl" }
+
+joml = { module = "org.joml:joml", version.ref = "joml" }
+fastutil = { module = "it.unimi.dsi:fastutil", version.ref = "fastutil" }
+glsl-transformation-lib = { module = "org.taumc:glsl-transformation-lib", version.ref = "glslTransformLib" }
+antlr4-runtime = { module = "org.antlr:antlr4-runtime", version.ref = "antlr4Runtime" }
+jcpp = { module = "org.anarres:jcpp", version.ref = "jcpp" }
+
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+
+devauth-fabric = { module = "me.djtheredstoner:DevAuth-fabric", version.ref = "devauth" }
+
+[bundles]
+lwjgl = [
+    "lwjgl-tinyfd",
+    "lwjgl-stb"
+]

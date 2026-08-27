@@ -1,0 +1,36 @@
+package re.lilith.aurum.gl.uniform.types;
+
+import org.joml.Matrix4f;
+import org.lwjgl.BufferUtils;
+import re.lilith.aurum.gl.AurumRenderSystem;
+import re.lilith.aurum.gl.uniform.Uniform;
+
+import java.nio.FloatBuffer;
+import java.util.function.Supplier;
+
+public class JomlMatrixUniform extends Uniform {
+    private final FloatBuffer buffer = BufferUtils.createFloatBuffer(16);
+    private Matrix4f cachedValue;
+    private final Supplier<Matrix4f> value;
+
+    public JomlMatrixUniform(int location, Supplier<Matrix4f> value) {
+        super(location);
+
+        this.cachedValue = null;
+        this.value = value;
+    }
+
+    @Override
+    public void update() {
+        Matrix4f newValue = value.get();
+
+        if (!newValue.equals(cachedValue)) {
+            cachedValue = new Matrix4f(newValue);
+
+            cachedValue.get(buffer);
+            buffer.rewind();
+
+            AurumRenderSystem.uniformMatrix4fv(location, false, buffer);
+        }
+    }
+}

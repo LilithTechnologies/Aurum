@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "re.lilith.aurum.mixin.vertices",
+  "compatibilityLevel": "JAVA_8",
+  "verbose": true,
+  "client": [
+    "MixinBufferBuilder",
+    "MixinTextRenderer",
+    "MixinVertexBuffer",
+    "MixinVertexFormat",
+    "blocks.MixinBlockModelRenderer",
+    "blocks.MixinBlockModelRenderer_QuadFace",
+    "blocks.MixinFluidRenderer"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

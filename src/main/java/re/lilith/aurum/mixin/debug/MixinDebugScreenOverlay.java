@@ -1,0 +1,80 @@
+package re.lilith.aurum.mixin.debug;
+
+import net.minecraft.client.gui.hud.DebugHud;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import re.lilith.aurum.Aurum;
+
+import java.lang.management.BufferPoolMXBean;
+import java.lang.management.ManagementFactory;
+import java.text.CharacterIterator;
+import java.text.StringCharacterIterator;
+import java.util.List;
+import java.util.Objects;
+
+@Mixin(DebugHud.class)
+public abstract class MixinDebugScreenOverlay {
+    @Unique
+    private static final List<BufferPoolMXBean> aurum$pools = ManagementFactory.getPlatformMXBeans(BufferPoolMXBean.class);
+
+    @Unique
+    private static final BufferPoolMXBean aurum$directPool;
+
+    static {
+        BufferPoolMXBean found = null;
+
+        for (BufferPoolMXBean pool : aurum$pools) {
+            if (pool.getName().equals("direct")) {
+                found = pool;
+                break;
+            }
+        }
+
+        aurum$directPool = Objects.requireNonNull(found);
+    }
+
+    @Inject(method = "getRightText", at = @At("RETURN"))
+    private void aurum$appendShaderPackText(CallbackInfoReturnable<List<String>> cir) {
+        List<String> messages = cir.getReturnValue();
+
+        messages.add("");
+        messages.add("[" + Aurum.MODNAME + "] Version: " + Aurum.getFormattedVersion());
+        messages.add("");
+
+        if (Aurum.getAurumConfig().areShadersEnabled()) {
+            messages.add("[" + Aurum.MODNAME + "] Shaderpack: " + Aurum.getCurrentPackName() + (Aurum.isFallback() ? " (fallback)" : ""));
+            Aurum.getCurrentPack().ifPresent(pack -> messages.add("[" + Aurum.MODNAME + "] " + pack.getProfileInfo()));
+        } else {
+            messages.add("[" + Aurum.MODNAME + "] Shaders are disabled");
+        }
+
+        messages.add(3, "Direct Buffers: +" + aurum$humanReadableByteCountBin(aurum$directPool.getMemoryUsed()));
+    }
+
+    @Inject(method = "getLeftText", at = @At("RETURN"))
+    private void aurum$appendShadowDebugText(CallbackInfoReturnable<List<String>> cir) {
+        List<String> messages = cir.getReturnValue();
+
+        Aurum.getPipelineManager().getPipeline().ifPresent(pipeline -> pipeline.addDebugText(messages));
+    }
+
+    // stackoverflow.com/a/3758880
+    @Unique
+    private static String aurum$humanReadableByteCountBin(long bytes) {
+        long absB = bytes == Long.MIN_VALUE ? Long.MAX_VALUE : Math.abs(bytes);
+        if (absB < 1024) {
+            return bytes + " B";
+        }
+        long value = absB;
+        CharacterIterator ci = new StringCharacterIterator("KMGTPE");
+        for (int i = 40; i >= 0 && absB > 0xfffccccccccccccL >> i; i -= 10) {
+            value >>= 10;
+            ci.next();
+        }
+        value *= Long.signum(bytes);
+        return String.format("%.3f %ciB", value / 1024.0, ci.current());
+    }
+}

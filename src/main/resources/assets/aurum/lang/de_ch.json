@@ -1,0 +1,28 @@
+{
+  "aurum.shaders.reloaded": "Shaders neu glade!",
+  "aurum.shaders.toggled": "Shaders umgschalte zu %s!",
+  "aurum.keybind.reload": "Shaders neu lade",
+  "aurum.keybind.shaderPackSelection": "Shaderpack uswähle",
+  "aurum.keybind.toggleShaders": "Shaders i/uschalte",
+  "aurum.keybinds": "Aurum",
+  "aurum.shaders.reloaded.failure": "Shader neu lade hed ned funktioniert! Grund: %s",
+  "aurum.shaders.toggled.failure": "Shader i/uschalte hed ned funktioniert! Grund: %s",
+
+  "options.aurum.apply": "Awende",
+  "options.aurum.refresh": "Neu lade",
+  "options.aurum.openShaderPackFolder": "Shader Pack Ordner öffne...",
+  "options.aurum.refreshShaderPacks": "Shader Packs aktualisiere",
+  "options.aurum.shaderPackSelection": "Shader Packs...",
+  "options.aurum.shaderPackSelection.title": "Shader Packs",
+  "options.aurum.shaderPackSelection.addedPack": "Shader Pack hinzuegfüegt \"%s\"",
+  "options.aurum.shaderPackSelection.addedPacks": "%s Shader Packs hinzuegfüegt",
+  "options.aurum.shaderPackSelection.failedAdd": "Dateie sind kei gültigi Shader Packs gsi",
+  "options.aurum.shaderPackSelection.failedAddSingle": "\"%s\" isch keis gültiges Shader Pack",
+  "options.aurum.shaderPackSelection.copyError": "Shader Pack \"%s\" hinzuefüege hed ned funktioniert",
+  "options.aurum.shaderPackSelection.copyErrorAlreadyExists": "\"%s\" isch bereits i dim Shader Pack Ordner",
+  "options.aurum.shaders.disabled": "Shaders: Usgschalte",
+  "options.aurum.shaders.enabled": "Shaders: Igschalte",
+
+  "pack.aurum.select.title": "Uswähle",
+  "pack.aurum.list.label": "+ zum hinzuefüege Shader Packs hie ine zieh"
+}
