@@ -262,6 +262,14 @@ public class ProgramUniforms {
             typeName = "float";
         } else if (type == GL20C.GL_INT) {
             typeName = "int";
+        } else if (type == GL20C.GL_BOOL) {
+            typeName = "bool";
+        } else if (type == GL20C.GL_BOOL_VEC2) {
+            typeName = "bvec2";
+        } else if (type == GL20C.GL_BOOL_VEC3) {
+            typeName = "bvec3";
+        } else if (type == GL20C.GL_BOOL_VEC4) {
+            typeName = "bvec4";
         } else if (type == GL20C.GL_FLOAT_MAT4) {
             typeName = "mat4";
         } else if (type == GL20C.GL_FLOAT_VEC4) {
@@ -306,8 +314,14 @@ public class ProgramUniforms {
     private static UniformType getExpectedType(int type) {
         if (type == GL20C.GL_FLOAT) {
             return UniformType.FLOAT;
-        } else if (type == GL20C.GL_INT) {
+        } else if (type == GL20C.GL_INT || type == GL20C.GL_BOOL) {
             return UniformType.INT;
+        } else if (type == GL20C.GL_BOOL_VEC2) {
+            return UniformType.VEC2I;
+        } else if (type == GL20C.GL_BOOL_VEC3) {
+            return UniformType.VEC3I;
+        } else if (type == GL20C.GL_BOOL_VEC4) {
+            return UniformType.VEC4I;
         } else if (type == GL20C.GL_FLOAT_MAT4) {
             return UniformType.MAT4;
         } else if (type == GL20C.GL_FLOAT_VEC4) {
