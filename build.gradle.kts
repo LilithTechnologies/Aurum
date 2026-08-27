@@ -48,8 +48,8 @@ dependencies {
 
     implementation(libs.celeritas)
     implementation(libs.fastutil)
+    implementation(libs.joml)
 
-    bundled(libs.joml)
     bundled(libs.jcpp)
     bundled(libs.glsl.transformation.lib) {
         exclude(module = "antlr4")
