@@ -6,7 +6,7 @@ legacyYarn = "1.8.9+build.4"
 fabricLoader = "0.19.3"
 
 lenis = "0.1.3"
-argentum = "1.0.0"
+argentum = "1.0.0+c7e7b95"
 
 lwjgl = "3.4.3"
 joml = "1.10.5"
@@ -16,7 +16,7 @@ antlr4Runtime = "4.13.2"
 jcpp = "1.4.14"
 lombok = "1.18.46"
 
-celeritas = "2.4.0-dev.6"
+celeritas = "2.5.0-pre.1"
 osl = "0.20.1"
 
 devauth = "1.2.2"
@@ -33,6 +33,7 @@ legacy-yarn = { module = "net.legacyfabric:legacy-yarn", version.ref = "legacyYa
 fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabricLoader" }
 
 lenis = { module = "pl.tomgirl:lenis", version.ref = "lenis" }
+argentum = { module = "dev.rdh:argentum", version.ref = "argentum" }
 
 celeritas = { module = "org.embeddedt.celeritas:celeritas-common", version.ref = "celeritas" }
 
