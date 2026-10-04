@@ -1,6 +1,6 @@
 package re.lilith.aurum.celeritas.mixin;
 
-import dev.rdh.argentum.impl.render.terrain.compile.PrimitiveChunkBuildContext;
+import dev.rdh.argentum.impl.render.terrain.compile.ArgentumChunkBuildContext;
 import net.minecraft.client.render.BufferBuilder;
 import net.minecraft.client.render.VertexFormat;
 import org.embeddedt.embeddium.impl.render.chunk.vertex.format.ChunkVertexEncoder;
@@ -13,8 +13,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import re.lilith.aurum.celeritas.terrain.BlockContextHolder;
 import re.lilith.aurum.vertices.ExtendingBufferBuilder;
 
-@Mixin(PrimitiveChunkBuildContext.class)
-public class MixinPrimitiveChunkBuildContext {
+@Mixin(ArgentumChunkBuildContext.class)
+public class MixinArgentumChunkBuildContext {
     @Inject(method = "beginSection", at = @At("HEAD"))
     private void aurum$resetRecordedQuads(CallbackInfo ci) {
         BlockContextHolder.get().clearRecordedQuads();

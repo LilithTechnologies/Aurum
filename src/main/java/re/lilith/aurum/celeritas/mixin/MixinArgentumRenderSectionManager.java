@@ -1,6 +1,6 @@
 package re.lilith.aurum.celeritas.mixin;
 
-import dev.rdh.argentum.impl.render.terrain.PrimitiveRenderSectionManager;
+import dev.rdh.argentum.impl.render.terrain.ArgentumRenderSectionManager;
 import org.embeddedt.embeddium.impl.render.chunk.occlusion.AsyncOcclusionMode;
 import org.embeddedt.embeddium.impl.render.chunk.vertex.format.ChunkVertexType;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import re.lilith.aurum.celeritas.terrain.AurumChunkVertexType;
 import re.lilith.aurum.gbuffer.BlockRenderingSettings;
 
-@Mixin(PrimitiveRenderSectionManager.class)
-public class MixinPrimitiveRenderSectionManager {
+@Mixin(ArgentumRenderSectionManager.class)
+public class MixinArgentumRenderSectionManager {
     @ModifyArg(
             method = "<init>",
             at = @At(value = "INVOKE", target = "Lorg/embeddedt/embeddium/impl/render/chunk/RenderSectionManager;<init>(Lorg/embeddedt/embeddium/impl/render/chunk/RenderPassConfiguration;Ljava/util/function/Supplier;Ljava/util/function/BiFunction;ILorg/embeddedt/embeddium/impl/gl/device/CommandList;IIIZ)V"),

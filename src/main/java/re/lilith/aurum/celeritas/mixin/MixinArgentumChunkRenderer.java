@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import re.lilith.aurum.pipeline.pathways.shadows.ShadowRenderer;
 
-@Mixin(targets = "dev.rdh.argentum.impl.render.terrain.PrimitiveRenderSectionManager$ChunkRenderer")
+@Mixin(targets = "dev.rdh.argentum.impl.render.terrain.ArgentumRenderSectionManager$ChunkRenderer")
 public class MixinArgentumChunkRenderer {
     @Inject(method = "useBlockFaceCulling", at = @At("HEAD"), cancellable = true)
     private void aurum$keepAllFacesForShadows(CallbackInfoReturnable<Boolean> cir) {

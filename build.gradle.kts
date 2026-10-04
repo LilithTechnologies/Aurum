@@ -44,7 +44,7 @@ dependencies {
     modImplementation(libs.lenis)
     modImplementation(libs.devauth.fabric)
 
-    modImplementation(files("mods/argentum-1.0.0.jar"))
+    modImplementation(libs.argentum)
 
     implementation(libs.celeritas)
     implementation(libs.fastutil)

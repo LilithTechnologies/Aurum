@@ -5,17 +5,16 @@
   "compatibilityLevel": "JAVA_8",
   "verbose": true,
   "client": [
+    "MixinArgentumChunkBuildContext",
     "MixinArgentumChunkRenderer",
+    "MixinArgentumRenderSectionManager",
+    "MixinCeleritasVideoOptionsController",
     "MixinEntityInstancing",
     "MixinEntityShadowBatch",
     "MixinFastBlockRenderer",
-    "MixinPrimitiveChunkBuildContext",
-    "MixinPrimitivePipelineState",
-    "MixinPrimitiveRenderSectionManager",
     "MixinRenderSectionManager",
     "MixinShaderChunkRenderer",
-    "MixinVideoOptionsScreen",
-    "MixinCeleritasVideoOptionsController"
+    "MixinVideoOptionsScreen"
   ],
   "injectors": {
     "defaultRequire": 1
